@@ -253,12 +253,12 @@
                         
                         <div class="space-y-5 text-base">
                             <div>
-                                <h5 class="font-bold uppercase tracking-wider text-sm mb-1">DevOps & Cloud</h5>
-                                <p class="italic text-gray-800 leading-snug">GitHub Actions, Docker, Docker Compose, Kubernetes, Terraform, Ansible, Jenkins, Git/GitHub, Microsoft Azure, Oracle Cloud, Linux, Windows Server, VMware ESXi</p>
+                                <h5 class="font-bold uppercase tracking-wider text-sm mb-1">DevOps & GitOps</h5>
+                                <p class="italic text-gray-800 leading-snug">ArgoCD, GitHub Actions, Docker, Docker Compose, Kubernetes, Helm, Terraform, Ansible, Jenkins, Git/GitHub, Microsoft Azure, Oracle Cloud, Linux, Windows Server, VMware ESXi</p>
                             </div>
                             <div>
-                                <h5 class="font-bold uppercase tracking-wider text-sm mb-1">QA & Test Automation</h5>
-                                <p class="italic text-gray-800 leading-snug">Playwright (E2E), Spring Boot Test, JUnit, Postman, Integration & Regression Testing</p>
+                                <h5 class="font-bold uppercase tracking-wider text-sm mb-1">Observability & QA</h5>
+                                <p class="italic text-gray-800 leading-snug">OpenTelemetry, Prometheus, Alertmanager, Playwright (E2E), Spring Boot Test, JUnit, Postman, Integration & Regression Testing</p>
                             </div>
                             <div>
                                 <h5 class="font-bold uppercase tracking-wider text-sm mb-1">Networking & Security</h5>
@@ -321,15 +321,14 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Project 1 -->
                     <article class="vintage-border p-6 bg-white">
-                        <h3 class="font-serif-headline text-2xl font-bold mb-2 uppercase leading-tight">Badge Validation API & AKS Deployment</h3>
+                        <h3 class="font-serif-headline text-2xl font-bold mb-2 uppercase leading-tight">Autonomous Closed-Loop GitOps Platform</h3>
                         <p class="text-xs uppercase font-bold text-gray-600 mb-4 tracking-wider border-b border-gray-300 pb-2">
-                            Python • Flask • Azure • Docker • K8s
+                            Kubernetes • ArgoCD • Prometheus • OpenTelemetry • Helm
                         </p>
                         <ul class="list-disc pl-5 text-base mb-4 space-y-2 text-justify">
-                            <li>Developed a Flask API with JWT HS256 encoded session management for secure badge validation.</li>
-                            <li>Utilized Azure SQL Database for reliable data storage.</li>
-                            <li>Containerized the application and managed image publishing in Azure Container Registry (ACR).</li>
-                            <li>Orchestrated the final deployment via Azure Kubernetes Service (AKS).</li>
+                            <li>Architected a self-healing GitOps platform utilizing ArgoCD App-of-Apps and ApplicationSet generators for declarative deployments and automated ephemeral PR preview environments.</li>
+                            <li>Instrumented microservices with OpenTelemetry SDK and Prometheus metrics; configured custom ServiceMonitor and PrometheusRule CRDs to detect 5xx error budget breaches in real time.</li>
+                            <li>Engineered an asynchronous Python remediation daemon interfacing with the ArgoCD REST API to execute automated rollbacks on Alertmanager webhooks, achieving a Mean Time to Remediation (MTTR) of 24.2s under synthetic chaos injection.</li>
                         </ul>
                     </article>
 
@@ -469,7 +468,7 @@
         const USERNAME = 'ayoubanlouf';
 
         // Pinned repositories (matches your GitHub pinned showcases)
-        const PINNED_REPOS = ['BadgeSys', 'HybridCloudGovernance', 'qurancom-py', 'SifdineDiscordBot'];
+        const PINNED_REPOS = ['self-healing-gitops', 'HybridCloudGovernance', 'qurancom-py', 'BadgeSys', 'SifdineDiscordBot'];
 
         // Map languages/topics to Devicon image paths
         function getIconUrl(repo) {
